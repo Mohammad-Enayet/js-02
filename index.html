@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Can Change HTML Content</title>
+    <style>
+        body{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .wrapper-div{
+            width: 500px;
+            padding: 40px;
+            background-color: purple;
+            color: #181212;
+            border-radius: 10px;
+        }
+        .wrapper-div h1{
+            font-size: 40px;
+        }
+        .wrapper-div h3{
+            font-size: 30px;
+            color: #fff;
+        }
+        .wrapper-div button[type="button"]{
+            background-color: #181212;
+            color: #fff;
+            padding-block: 1rem;
+            padding-inline: 3rem;
+            font-size: 1rem;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+        }
+        .wrapper-div button[type="button"]:hover{
+            background-color: transparent;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper-div">
+        <h1>JavaScript Can Change HTML Content</h1>
+        <button type="button" onclick="document.getElementById('byeH3ID').innerHTML = 'Hello JavaScript'">
+            Click Me to Change Bye JavaScript
+        </button>
+        <h3 id="byeH3ID">Bye JavaScript</h3>
+    </div>
+</body>
+</html>
